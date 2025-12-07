@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قضاء - حاسبة الصلوات الفائتة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🕋 مِداد 🕋</h1>
+        <p>مساعدتك لإنجاز واجب قضاء الصلوات.</p>
+    </header>
+
+    <div class="container">
+
+        <section class="summary-card">
+            <h2>📊 الإحصائيات والمتبقي</h2>
+            <div class="stats-grid">
+                <div>
+                    <h3>المتبقي الكلي (تقريبي)</h3>
+                    <p id="total-remaining-display" class="large-number">0 يوم</p>
+                </div>
+                <div>
+                    <h3>أيام القضاء المنجزة</h3>
+                    <p id="total-done-display" class="large-number done-count">0 يوم</p>
+                </div>
+            </div>
+            <p class="note">يتم احتساب اليوم الواحد كخمس صلوات مقضية.</p>
+        </section>
+
+        <section class="prayer-input-section">
+            <h2>✅ إضافة يوم قضاء جديد (5 صلوات)</h2>
+            <div class="prayer-buttons">
+                <button id="add-day-btn" class="main-add-button">
+                    أضف يوماً كاملاً (الخمس صلوات)
+                </button>
+            </div>
+            
+            <details class="prayer-details">
+                <summary>أو أضف صلاة واحدة محددة 👇</summary>
+                <div class="single-prayer-buttons">
+                    <button data-prayer="fajr">الصبح</button>
+                    <button data-prayer="dhuhr">الظهر</button>
+                    <button data-prayer="asr">العصر</button>
+                    <button data-prayer="maghrib">المغرب</button>
+                    <button data-prayer="isha">العشاء</button>
+                </div>
+            </details>
+        </section>
+
+        <section class="history-section">
+            <h2>📜 سجل القضاء الأخير</h2>
+            <ul id="history-list">
+                </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>نسأل الله القبول. الرجاء مراجعة أهل العلم للفتاوى الدقيقة.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

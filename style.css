@@ -1,0 +1,188 @@
+/* تنسيق عام واحترافي */
+:root {
+    --primary-color: #004d40; /* أخضر داكن (إسلامي) */
+    --secondary-color: #ffc107; /* ذهبي/عسلي */
+    --background-color: #f7f9fb; /* خلفية فاتحة ونظيفة */
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --success-color: #4CAF50;
+    --border-radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* تعيين خط عربي أنيق */
+    font-family: 'Arial', 'Tahoma', sans-serif; 
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    direction: rtl; /* اتجاه من اليمين لليسار */
+    text-align: right;
+    padding-bottom: 50px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* الرأس */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+/* بطاقات الإحصائيات */
+.summary-card, .prayer-input-section, .history-section {
+    background-color: var(--card-background);
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--secondary-color); /* شريط ذهبي أنيق */
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.stats-grid div {
+    padding: 15px;
+    background-color: #f0f4f7;
+    border-radius: 8px;
+}
+
+.large-number {
+    font-size: 3em;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.done-count {
+    color: var(--success-color);
+}
+
+.note {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* الأزرار */
+button {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.main-add-button {
+    width: 100%;
+    background-color: var(--success-color);
+    color: white;
+    margin-bottom: 15px;
+}
+
+.main-add-button:hover {
+    background-color: #388E3C;
+}
+
+.single-prayer-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.single-prayer-buttons button {
+    flex-grow: 1;
+    background-color: #f0f4f7;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.single-prayer-buttons button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* قائمة السجل */
+.history-section ul {
+    list-style: none;
+}
+
+.history-section li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95em;
+}
+
+.history-section li:last-child {
+    border-bottom: none;
+}
+
+.history-prayer-name {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* تذييل الصفحة */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e8e8e8;
+    color: #666;
+    font-size: 0.85em;
+}
+
+/* تنسيق التفاصيل القابلة للطي */
+.prayer-details summary {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 10px 0;
+    list-style: none; /* إزالة رمز السهم الافتراضي */
+    margin-bottom: 10px;
+}
+
+.prayer-details summary::before {
+    content: '▶ '; /* إضافة رمز مثلث بدلاً من السهم الافتراضي */
+    margin-left: 5px;
+}
+
+.prayer-details[open] summary::before {
+    content: '▼ ';
+}
